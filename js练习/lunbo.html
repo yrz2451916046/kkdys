@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>轮播图1</title>
+	</head>
+	<style>
+		*{margin:0;padding:0;}
+		*{list-style:none;}
+		#win{
+			width:500px;
+			height:350px;
+			overflow:hidden;
+			margin:80px auto;
+		}
+		#main{
+			width:2500px;
+			height:350px;
+			background:red;
+			
+		}
+		#main div{
+			width:500px;
+			height:350px;
+			float:left;
+		}
+	</style>
+	<body>
+		<div id="win">
+			<div id="main">
+				<div style="background-image:url(img/1.jpg);background-size:500px 350px;"></div>
+				<div style="background-image:url(img/2.jpg);background-size:500px 350px;"></div>
+				<div style="background-image:url(img/3.jpg);background-size:500px 350px;"></div>
+				<div style="background-image:url(img/4.jpg);background-size:500px 350px;"></div>
+				<div style="background-image:url(img/5.jpg);background-size:500px 350px;"></div>
+			</div><!--main-->
+		</div><!--win-->
+	</body>
+	<!--<script src="js/lunbo.js">
+	</script>-->
+	<script>
+		var omain=document.getElementById("main");
+		var i=1;
+		setInterval(function(){
+			omain.style.marginLeft=i*(-500)+"px";
+			if(i==5){
+				i=0;
+				omain.style.marginLeft=0+"px";
+			}
+			i++;
+			//startMove(omain,{"margin-left":i*-(500)});
+			
+		},2000)
+	</script>
+</html>

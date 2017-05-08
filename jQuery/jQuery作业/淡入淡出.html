@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>淡入淡出</title>
+		<script src="./jquery.js" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		li{list-style: none;}
+		#showtime{
+			width: 300px;
+			height: 400px;
+			margin:100px auto;
+			
+			overflow: hidden;
+			position: relative;
+		}
+		.longpic{
+			width: 1500px;
+			height:400px;
+			position:absolute;
+			left:0;
+		}
+		.longpic li{
+			width: 300px;
+			height:400px;
+			float: left;
+		}
+		img{
+			width: 300px;
+			height: 400px;
+		}
+	</style>
+	<body>
+		<div id="showtime">
+			<ul class="longpic">
+				<li><img src="img/叶子.jpg"/></li>
+				<li><img src="img/灯泡.jpg"/></li>
+				<li><img src="img/葡萄.jpg"/></li>
+				<li><img src="img/葡萄灯.jpg"/></li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+//		$(".longpic li:first").clone().appendTo(".longpic");
+//		var i=0;
+//		function next(){
+//			i++;
+//			$(".longpic").animate({"left":-300*i},1000,function(){
+//				if(i>3){
+//					i=0;
+//					$(this).css("left",0);
+//				}
+//			});
+//		}
+//		setInterval(next,2000);
+		var j=3;
+		function next1(){
+			$(".longpic li").eq(j).fadeOut(1000);
+			j--;
+			if(j<0){
+				j=3;
+			}
+			$(".longpic li").eq(j).fadeIn(1000);
+		}
+		setInterval(next1,2000);
+	</script>
+</html>

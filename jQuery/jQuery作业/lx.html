@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>轮播图</title>
+		<script src="./jquery.js" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		li{list-style: none;}
+		#showtime{
+			width: 300px;
+			height: 400px;
+			margin:100px auto;
+			background-color:red;
+			overflow: hidden;
+			position: relative;
+		}
+		.longpic{
+			width: 1500px;
+			height:400px;
+			position:absolute;
+			left:0;
+		}
+		.longpic li{
+			width: 300px;
+			height:400px;
+			float: left;
+		}
+		img{
+			width: 300px;
+			height: 400px;
+		}
+	</style>
+	<body>
+		<div id="showtime">
+			<ul class="longpic">
+				<li><img src="img/叶子.jpg"/></li>
+				<li><img src="img/灯泡.jpg"/></li>
+				<li><img src="img/葡萄.jpg"/></li>
+				<li><img src="img/葡萄灯.jpg"/></li>
+			</ul>
+		</div>
+	</body>
+	<script>
+//		var obj={"left":"-300px"};
+//		var lilist=document.getElementsByTagName("li")[0];
+//		console.log(obj.left);
+//		for(var i=0;i<lilist.length;i++){
+//			if(i<(lilist.length-1)){
+//				obj.left*=i;
+//				
+//			}else{
+//				i=0;
+//			}
+//		}
+//		$(".longpic").animate(obj,2000);
+		//++++++++++++++++++++++++++++++++++++++++
+//		for(var i=0;i>3;){
+//			i++;
+//			$(".longpic").animate({"left":i*"-300px"},2000);
+//          if (i==3) {
+//				i=0;
+//				
+//			}
+//		}
+		//+++++++++++++++++++++++++++++++++++++++++++
+//		$(".longpic li:first").clone().appendTo(".longpic");
+//		var i=0;
+//		function next(){
+//			i++;
+//			$(".longpic").animate({"left":-300*i},1000,function(){
+//				if(i>3){
+//					i=0;
+//					$(this).css("left",0);
+//				}
+//			});
+//		}
+//		setInterval(next,2000);
+		//++++++++++++++++++++++++++++++++++++++++++
+		
+	</script>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="day1/demo/jquery.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+	* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			
+			#box {
+				width: 560px;
+				height: 300px;
+				border: 1px solid black;
+				position: relative;
+			}
+			
+			.ul li {
+				float: left;
+				position: absolute;
+			}
+			p{  width: 50px;
+			    height: 50px;
+			    background: #CCCCCC;
+				position: absolute;
+				top: 50%;
+				margin-top: -25px;
+				font-size: 30px;
+				text-align: center;
+				line-height: 50px;
+			}
+			.btn2{
+				right: 0;
+			}
+	</style>
+	<body>
+		<div id="box">
+			<ul class="ul" >
+				<li class="img"><img src="img/0.jpg"/></li>
+				<li class="img"><img src="img/1.jpg"/></li>
+				<li class="img"><img src="img/2.jpg"/></li>
+				<li class="img"><img src="img/3.jpg"/></li>
+				
+			</ul>
+			<p class="btn1">&lt;</p>
+			<p class="btn2">&gt;</p>
+		</div>
+		<script type="text/javascript">var i = 0;
+			var timer;
+			$('.img').eq(0).show().siblings('.img').hide();
+			showTime();
+			
+			function showTime() {
+				//定时器
+				timer = setInterval(function() {
+					
+					Show();
+					i++;
+					
+					if (i == 5) {
+						i = 0;
+					}
+				}, 2000);
+			}
+			
+			function Show() {
+				
+			$('.img').eq(i).fadeIn(300).siblings('.img').fadeOut(300);
+			
+			}
+			 $('.btn1').click(function(){
+				    clearInterval(timer);
+				    if(i == 0){
+				      i = 5;//注意此时i的值
+				    }
+				    i--;
+				    Show();
+				    showTime();
+				  });
+				   
+				  //鼠标点击右侧的箭头
+				  $('.btn2').click(function(){
+				    clearInterval(timer);
+				    if(i == 4){
+				      i = -1;//注意此时i的值
+				    }
+				    i++;
+				    Show();
+				    showTime();
+				  });
+				   
+			
+		</script>
+	</body>
+</html>

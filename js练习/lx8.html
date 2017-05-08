@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>切换</title>
+		<link rel="stylesheet" type="text/css" href="css/qh.css"/>
+	</head>
+	<body>
+		<ul id="nav">
+			<li style="border-bottom: 2px solid green;">优才课堂</li>
+			<li>HTML5课堂</li>
+			<li>安卓课堂</li>
+			<li>PHP课堂</li>
+		</ul>
+		<ul id="box">
+			<li>优才课堂</li>
+			<li>HTML5课堂</li>
+			<li>安卓课堂</li>
+			<li>PHP课堂</li>
+		</ul>
+	</body>
+	<script>
+		//.index是获取下标
+		//重点是判断，判断之前要保存boxlist的下标和lilist的下标，下标相同才能保持同步
+		var nav=document.getElementById("nav");
+		var lilist=nav.getElementsByTagName("li");
+		var bloc=document.getElementById("box");
+		var boxlist=bloc.getElementsByTagName("li");
+		for (var i=0;i<boxlist.length;i++) {
+			boxlist[i].index=i;
+		}
+		for (var i=0;i<lilist.length;i++) {
+			lilist[i].index=i;
+			lilist[i].onclick=function(){
+				for (var j=0;j<boxlist.length;j++) {
+					if (boxlist[j].index==this.index) {
+						this.style.borderBottom="2px solid green";
+						boxlist[j].style.display="block";
+					} else{
+						boxlist[j].style.display="none";
+						lilist[j].style.borderBottom="none";
+					}
+				}
+			}
+		}
+	</script>
+</html>

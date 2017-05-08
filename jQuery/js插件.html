@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="jquery.js" charset="utf-8"></script>
+	<script type="text/javascript">
+		//trim  去掉两边的空格
+		
+		//插件分为两种
+		//$("").css();
+		//$("").each();
+		//工具函数
+		//$.each();
+		//$.trim();
+		//需求是封装一个只去掉左边的空格
+		$.extend({
+			leftTrim:function(str){
+				return str.replace(/^\s+/,'')
+			}
+			stark:function(str){
+				alert("")
+			}
+		})
+		
+		//$.fn()
+		
+	</script>
+	<script type="text/javascript">
+		var str=" stark ";
+		console.log("("+str+")");//没有使用工具函数
+		console.log("("+$.trim(str)+")");
+		
+	</script>
+</html>

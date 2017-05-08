@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>选项卡</title>
+		<script src="./jquery.js" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		*{margin:0;padding:0;}
+		li{list-style:none;float:left;}
+		
+		#box1{
+			width:100%;
+			height:50px;
+			background-color:red;
+		}
+		#box1 ul{
+			width: 1000px;
+			height: 50px;
+			background: yellow;
+			margin:0 auto;
+		}
+		#box1 ul li{
+			width: 250px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			font-size: 30px;
+			position: relative;
+		}
+		#box1 ul li div{
+			width:998px;
+			height:598px;
+			border:1px solid green;
+			background-color: #ccc;
+			position: absolute;
+			left:0;
+			display: none;
+		}
+	</style>
+	<body>
+		<div id="box1">
+			<ul>
+				<li>核心
+					<div>
+						1
+					</div>
+				</li>
+				<li>选择器
+					<div style="left:-250px;">
+						2
+					</div>
+				</li>
+				<li>AJAX
+					<div style="left:-500px;">
+						3
+					</div>
+				</li>
+				<li>属性
+					<div style="left:-750px;">
+						4
+					</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$("li").hover(
+			function(){
+				$(this).css("background-color","red");
+				$("li div").css("display","block");
+			},
+			function(){
+				$(this).css("background-color","yellow");
+				$("li div").css("display","none");
+			}
+		)
+	</script>
+</html>

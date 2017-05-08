@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		/*git pull下拉代码
+		git fetch origin获取所有分支的代码
+		git checkout zhengze 切换分支
+		
+		前面讲了,正则表达式中的所有字母,汉字,数字,
+		都是按照字面含义进行匹配的
+		
+		console.log(str.match(/bb/g));
+		
+		js正则表达式语法也支持费字母的字符,汉字,数字的字符匹配
+		这些字符需要通过反斜线(\)作为前缀进行转义
+		
+		\n  /\n/回车符
+		\t  /\t/制表符:	就是tab键*/
+		
+		/*var str="hello\nstark";//回车（单引号和双引号都可以解析）
+		var str1="Hi	Stark";
+		//var reg=/\t/;
+		var reg1=/\n/;
+		//console.log(str);
+		//console.log(reg.test(str1));
+		console.log(reg1.test(str));*/
+		
+		/*它是有一一对应字符组成的集合,通过[]包裹住,
+		来表示这几个字母组成的一个集合
+		范围类 
+			A-Z匹配大写
+			a-z匹配小写
+			0-9匹配数字
+		以什么开头^stark以什么开头
+		如[abDf78];*/
+		
+		/*var reg=/[abc]/;
+		console.log(reg.test("woiegahweg"));*/
+		
+		/*var reg=/[i-y]/;//?
+		console.log(reg.test("abegHNNGDFHx"));*/
+		
+		/*var reg=/[A-Z]/;//规则：是否包含大写
+		console.log(reg.test("wogiewngweHERHERf"));*/
+		
+		/*var reg=/[a-z]/;//规则：是否包含小写
+		console.log(reg.test("HERHERsdlwelgk"));*/
+		
+		/*var reg=/[0-9]/;//规则：是否包含数字
+		console.log(reg.test("wogiewngw26eHERHERf"));*/
+		
+		/*
+		var reg=/[^abc]/;//不在括号内的任意字符(只要有其他任意字符就为true)
+		console.log(reg.test("abcaabbccabcwegwgaerhsehr"));*/
+		
+		/*var reg=/[a-zA-Z0-9]/;//匹配大小写字母和数字规则
+		console.log(reg.test("wiwgewg3992057235ERHERH"));*/
+		
+		/*分界
+		开头/^.../ 以...开头*/
+		/*var reg=/^stark/;//以stark开头的匹配规则
+		console.log(reg.test("starkwogiewu"));*/
+		
+		//$ 以什么结尾
+		/*var reg=/xiaobai$/;//以什xiaobai结尾
+		console.log(reg.test("jgwoeighwexiaobai"));*/
+		
+		
+		/*// \d [0-9] 数字字符
+		var reg=/\d/;//0-9的十进制数
+		console.log(reg.test("gwo23ewhei"));*/
+		
+		//\D [^0-9] 非数字字符
+		/*var reg=/\D/;//数字之外的字符
+		console.log(reg.test("3985273sdg582"));*/
+		
+		// \S 非空白字符
+		//空白字符就是  空格
+		//非空白字符就是  除空格之外  比如  asas这种字符就是非空格
+		/*var reg=/\S/;//只要满足一种条件就会返回true
+		console.log(reg.test("woigehwgoi"));//true
+		console.log(reg.test(" "));//false
+		console.log(reg.test("woig  ehwgoi"));//true*/
+		
+		//\w /[a-zA-Z0-9]/ 包含字母大小写和数字
+		/*var reg=/\w/;
+		console.log(reg.test("20935725092"));//true
+		console.log(reg.test("jwoegiwg"));//true
+		console.log(reg.test("GEWHWH"));//true
+		console.log(reg.test(" "));//false
+		console.log(reg.test("#$^#$^#"));//false*/
+		
+		// \W /[^a-zA-Z0-9]/ 不包含大小写字母和数字
+		/*var reg=/\W/;
+		console.log(reg.test("woigwueg"));//false
+		console.log(reg.test("GEGWEGWEG"));//false
+		console.log(reg.test("2352643624"));//false
+		console.log(reg.test("woighwegSGWGWWHGW26246"));//false
+		console.log(reg.test(" "));//true
+		console.log(reg.test("@$^#$^"));//true*/
+		
+		// ?  出现量词零次或一次
+		//非贪婪模式
+		
+		//贪婪
+		
+		//var reg=/a+?/;//非贪婪（1个a）
+		//console.log(reg.exec("aaaab")[0]);//a
+		//var reg=/a+/;//贪婪（4个a）
+		//console.log(reg.exec("aaaab")[0]);//aaaa
+		
+		
+		// + 出现一次或多次，至少出现一次
+		/*var reg=/\s?/;//??
+		console.log(reg.test("as a  awoiegwegjjjs"));//true??*/
+		
+		/*var reg=/\s+/;//??
+		console.log(reg.test("stark"));//false??*/
+		
+		// * 出现零次或多次 (包含零次)
+//		var reg=/\s*/;//??
+//		console.log(reg.test("asasa"));//true??
+
+		/*{n}  出现n次
+		{n,m} 出现n到m次
+		{n,} 至少出现n次*/
+		
+		/*var reg=/\s{2,4}/;
+		console.log(reg.test("ja  wegwegwg     ssssssaj   "));*/
+		
+//		var reg=/\s{2}/;
+//		console.log(reg.test("jsa   sa j "));//??
+//		
+//		var reg=/\s{5,}/;
+//		console.log(reg.test("asdas     sasasa"));
+		
+		//g 表示全局匹配
+		/*var str="starkjjjjssasaastark";
+		console.log(str.match(/stark/));//["stark",index:0]
+		console.log(str.match(/stark/g));//["stark","stark"]*/
+		
+		
+		// i 表示忽略大小写
+		/*var str="hello SHUDONG";
+		console.log(str.match(/shudong/));//null
+		console.log(str.match(/shudong/i));//["SHUDONG",index:6]*/
+		
+		
+		//选择 前面的条件不满足就匹配后面的条件
+		/*var reg=/aa|bb/;
+		console.log(reg.test("ljkajfjgogoaab"));*/
+		
+		// () 组合，将几个项目组合为一个单元
+		// \n 表示匹配到的第几个单元
+		/*var reg=/ab(cd)ef(hi)\2/;
+		console.log(reg.test("abcdefhi"));//false
+		console.log(reg.test("abcdefhihi"));//true*/
+		
+		/*var reg=/hi(stark)howareyou(f)(h)\1\3/;
+		console.log(reg.test("histarkhowareyoufhstarkhwoigehge"));//true*/
+		
+		/*此时的$符号代表 配平的单元 单元就是一个()里匹配的东西
+		$1就是代表匹配到的第一个单元
+		$2就是第二个
+		...
+		最多就到$9*/
+		
+		/*var result="abcdefig".replace(/ab(cd)e(fi)g/,function(match,$1,$2){
+			return "ab" + $1 + "----" + $2 + "---" + $1;
+		})
+		console.log(result);*/
+		
+		
+		/*var reg=/aa(mobile)cc(email)name(mobile)zhuozi(eamil)/;
+		console.log(reg.test("aamobileccemailnamemobilezhuoziemail"));//true*/
+		
+		/*var reg=/aa(mobile)cc(email)name\1zhuozi\2/;
+		console.log(reg.test("aamobileccemailnamemobilezhuoziemail"));//true*/
+		
+		/*var reg = /\d{2,4}/;//贪婪，匹配范围的最大值
+    	// console.log(reg.test('11111'));
+    	console.log(reg.exec('1234567')[0]); //1234
+    	//console.log(reg.exec('1')); //null
+
+    	var reg = /\d{2,4}?/;//非贪婪，匹配范围的最小值
+    	console.log(reg.exec('1234567')[0]); //12
+
+    	var reg = /\d{2,}/;
+    	console.log(reg.exec('1234567')[0]); //1234567    		
+
+    	var reg = /\d{2,}?/;
+    	console.log(reg.exec('1234567')[0]); //12
+    	
+    	var reg = /\d{2}/;
+    	console.log(reg.exec('1234567')[0]); //12*/
+    	
+    	// ? 经常和 + 一起使用
+
+	</script>
+</html>

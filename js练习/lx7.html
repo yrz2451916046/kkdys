@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>date</title>
+	</head>
+	<body>
+		<ul id="lest">
+			<li class="odd">1</li>
+			<li>2</li>
+			<li class="odd">3</li>
+			<li>4</li>
+			<li class="odd">5</li>
+			<li>6</li>
+			<li class="odd">7</li>
+			<li>8</li>
+		</ul>
+	</body>
+	<script>
+		//获取节点元素
+		window.onload=function(){
+			var oul=document.getElementById("lest");
+			console.log(oul);
+			var oli=document.getElementsByTagName("li");
+			console.log(oli);
+			var odd=document.getElementsByClassName("odd");
+			console.log(odd);
+			var oli=oul.childNodes;//获取子节点
+			for (var i=0;i<oli.length;i++){
+				if(oli[i].nodeType==1){
+					console.log(oli[i].childNodes[0].nodeValue);
+				}else if(oli[i].nodeType==3){
+					console.log(oli[i].nodeValue);
+				}
+				console.log(oli[i]);
+			}
+		}
+		//获取子节点
+		
+	</script>
+</html>

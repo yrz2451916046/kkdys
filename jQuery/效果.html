@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>效果</title>
+		<script src="./jquery.js" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		.box{
+			width:100px;
+			height:100px;
+			background:red;
+		}
+	</style>
+	<body>
+		<input type="" name="" id="" value="show" />
+		<input type="" name="" id="" value="hide" />
+		<input type="" name="" id="" value="toggle" />
+		<input type="" name="" id="" value="slideDown" />
+		<input type="" name="" id="" value="slideUp" />
+		<input type="" name="" id="" value="fadeIn" />
+		<input type="" name="" id="" value="fadeOut" />
+		<input type="" name="" id="" value="fadeToggle" />
+		<div class="box">
+			
+		</div>
+	</body>
+	<script>
+		//显示隐藏的匹配元素
+		$("input:eq(0)").click(function(){
+			$(".box").show();
+		})
+		$("input:eq(1)").click(function(){
+			$(".box").hide();
+		})
+		//
+		$("input:eq(2)").click(function(){
+			$(".box").toggle(1000,function(){//1000可以换成"fast/normal"
+				alert("切换完毕");
+			});
+		})
+		//滑动slideDown slideUp
+		$("input:eq(3)").click(function(){
+			$(".box").slideDown(400);
+		})
+		$("input:eq(4)").click(function(){
+			$(".box").slideUp(400);
+		})
+		//淡入淡出fadeIn
+		$("input:eq(5)").click(function(){
+			$(".box").fadeIn(400);
+		})
+		$("input:eq(6)").click(function(){
+			$(".box").fadeOut(400);
+		})
+		$("input:eq(7)").click(function(){
+			$(".box").fadeToggle(400);
+		})
+		//stop
+		
+	</script>
+</html>

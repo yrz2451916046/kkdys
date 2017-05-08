@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>小人行走</title>
+	</head>
+	<style>
+		*{margin:0;padding:0;}
+		div{
+			width:64px;
+			height:127px;
+			background:url(img/小人行走.png) no-repeat;
+			background-position:0px -256px;
+			position:absolute;
+			left:0px;
+			top:0px;
+		}
+	</style>
+	<body>
+	</body>
+	<script>
+		//第一步首先想到 new
+		//哪些是可以变化的值
+		//变化left的值就会动  此时会跑（僵尸跑）
+		//想要腿动需要改变图片位置backgroundPosition改变他的x轴
+		//发现小人走了几步就消失了
+		//然后小人的动作一共有8个，从第一个开始到第七个就消失了
+		//此时当小人走到第七步的时候让footnum=0回到第一张图
+		//出现小人跑到右边框没有停下，还继续跑
+		//想让他停下 会想到屏幕的宽度
+		function Run(left,top){
+			this.top=top;
+			this.left=left;
+			this.dom=document.createElement("div");
+			document.body.appendChild(this.dom);
+			this.dom.style.left=this.left+"px";
+			this.dom.style.top=this.top+"px";
+			
+		}
+		new Run(100,100);
+		new Run(200,200);
+		new Run(300,300);
+	</script>
+</html>

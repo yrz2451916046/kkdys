@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		function fun(){
+			console.log(this);
+		}
+		
+		var num={
+			name:"xiaoming",
+			sex:"男",
+//			age:function (){
+//			console.log(this.name);
+		}
+		fun.apply(num)
+//		}
+//		num.age
+	</script>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!--<table border="1px" bordercolor="red">
+			<tr>
+				<td>星期</td>
+				<td>星期一</td>
+				<td>星期二</td>
+				<td>星期三</td>
+				<td>星期四</td>
+				<td>星期五</td>
+			</tr>
+			<tr>
+				<td>第一节</td>
+				<td>语文</td>
+				<td>化学</td>
+				<td>数学</td>
+				<td>英语</td>
+				<td>体育</td>
+			</tr>
+			<tr>
+				<td>第二节</td>
+				<td>语文</td>
+				<td>化学</td>
+				<td>数学</td>
+				<td>英语</td>
+				<td>体育</td>
+			</tr>
+			<tr>
+				<td>第三节</td>
+				<td>语文</td>
+				<td>语文</td>
+				<td>语文</td>
+				<td>语文</td>
+				<td>语文</td>
+			</tr>
+			<tr>
+				<td>第四节</td>
+				<td>语文</td>
+				<td>语文</td>
+				<td>语文</td>
+				<td>语文</td>
+				<td>语文</td>
+			</tr>
+		</table>-->
+	</body>
+	<script>
+		/*var foo=100;
+		console.log(foo);//100
+		function foo(){
+			return 1;
+		}
+		foo ();//报错
+		function foo(){
+			console.log(2);
+		}
+		foo();*/
+		/*var a=100;
+		(function (){
+			console.log(a);//undefind
+			var a=5;
+			console.log(a);//5
+		})()
+		console.log(a);//100*/
+		/*var a=100;
+		(function (){
+			console.log(a);//100
+			a=5;
+			console.log(a);//5
+		})()
+		console.log(a);//5*/
+		//阶乘
+		/*function fun(a){
+			var sum=1;
+			for(var i=1;i<=a;i++){
+				sum*=i;
+			}
+			return sum;
+		}
+		var num=0;
+		for (var j=1;j<=10;j++){
+			num+=fun(j);
+		}
+		console.log(num);//1-10阶乘的和*/
+		//颠倒数字
+		/*a=prompt("请输入一个数字")
+		function rev(a){
+			var b=0;//初始一个变量 用来保存每次提取的数字
+			while (a){
+				b=a%10+b*10;
+				//之前保留的数字乘10加上本次截留的个位数作为下次保留的数字
+				a=parseInt(a/10);
+			}
+			return b;
+		}
+		console.log(rev(a));
+		console.log(a);*/
+		/*function sum(a,b,c){
+			return (function(a,b){
+				return a>b?a:b;
+			})(a,b)+c;
+		}
+		console.log(sum(7,2,3));*/
+		/*function fun(n){
+			if (n==1||n==2){
+				return 1;
+			}else{
+				return fun(n-1)+fun(n-2);
+			}
+		}//函数调用函数本身就是函数的递归。
+		console.log(fun(10));*/
+		//递归算阶乘
+		/*function fun(n){
+			if (n==1){
+				return 1;
+			}else{
+				return n*fun(n-1);
+			}
+		}
+		console.log(fun(4));*/
+		/*function add(){
+			var sum=0;
+			for (var i=0;i<arguments.length;i++){
+				sum+=arguments[i]
+			}
+			return sum;
+		}
+		console.log(add(1,2,3,4,5,6,7,8,9,10));*/
+	</script>
+</html>

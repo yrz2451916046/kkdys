@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		//基本闭包练习写法
+		/*function outter(){
+			var a=1;
+			var innner=function(){
+				return i++;
+			}
+			return innner;
+		}
+		var inn=outter;
+		console.log(inn());*/
+		/*var arr=[1,2,3,4,5];
+		    arr[100]=100;
+		    console.log(arr);
+		    console.log(arr[200]);
+		    console.log(arr[90]);*/
+		/*var arr=[];
+		var i=0;//每个数组元素的下标
+		var input;//员工姓名
+		while (input!="exit"){
+			input=prompt("请输入员工姓名");
+			if(input!="exit"){
+				arr[i]=input;
+				i++;
+			}
+		}
+		console.log(arr);*/
+		var arr=[];
+		var i=0;//每个数组元素的下标
+		var input;//员工姓名
+		while (input=prompt("请输入员工姓名")!="exit"){
+				arr[i++]=input;
+		}
+		console.log(arr);
+		//删除末位元素
+		/*arr=[1,2,3,4,5];
+		arr.length-=1;
+		console.log(arr);*/
+		//向数组末尾增添新元素
+		/*arr=[1,2,3,4,5];
+		arr[arr.length]=6;
+		console.log(arr);*/
+		//获取最大值
+		/*arr=[1,2,3,4,5];
+		function getMax(arr){
+			var max=arr[0];
+			for (var i=1;i<arr.length;i++){
+				arr[i]>max&&(max=arr[i]);
+			}
+			return max;
+		}
+		console.log(getMax(arr));*/
+		
+		
+		/*function indexOf(arr,num){
+			for (var i=0;i<arr.length;i++){
+				if (arr[i]==num){
+					return i;
+				}
+			}
+			return -1;
+		};
+		console.log(indexOf([1,2,3,4],6));*/
+		//判断一个元素是否在数组内
+		/*num=prompt("请输入一个数字");
+		function cat(arr,num){
+			for (var i=0;i<arr.length;i++){
+				if (arr[i]==num){
+					return i;
+				}
+			}
+			return -1;
+		};
+		console.log(cat([1,2,3,4],num));*/
+		//冒泡排序
+		/*function maopao(arr){
+			for(var i=0;i<arr.length-1;i++){//循环轮
+				for(var j=0;j<arr.length-1-i;j++){//循环次数
+					if(arr[j]>arr[j+1]){//比较
+						var tem=arr[j];//给一个中间变量存储大的数值
+						arr[j]=arr[j+1];//把小的数放前面
+						arr[j+1]=tem;//把大的数字重新赋值
+					}
+				}
+			}
+			return arr;//返回数组
+		}
+		console.log(maopao([2,5,1,465,233,15,34,13,45]));*/
+		
+	</script>
+</html>

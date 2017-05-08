@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="ad" style="width:500px;height:300px;text-align: center;position: absolute;margin: auto;left:0;top:0;bottom: 0;right: 0;background: #abcdef;">
+			我是一个广告！
+			<span style="color:red;">5</span>秒后自动消失！
+		</div>
+	</body>
+	<script>
+		var dsq=setInterval(function(){
+			var ad=document.getElementById("ad");
+			var span=ad.getElementsByTagName("span")[0];
+			span.innerHTML-=1;
+			if(span.innerHTML==0){
+				clearInterval(dsq);
+				ad.style.display="none";
+			}
+		},1000)
+		//用setTimeout模仿setInterval
+		/*function c(){
+			console.log(1);
+			setTimeout(c,2000);
+		}
+		setTimeout(c,2000);
+		//
+		setInterval(function(){
+			console.log(2);
+		},2000);*/
+		
+	</script>
+</html>

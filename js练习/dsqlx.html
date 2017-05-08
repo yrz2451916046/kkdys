@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>定时器练习-qq</title>
+	</head>
+	<style>
+		#qq{
+			width:300px;
+			height:500px;
+			float: right;
+			background:blueviolet;
+			position:relative;
+		}
+		#small{
+			width:50px;
+			height:50px;
+			margin-top:200px;
+			margin-left:20px;
+			background:greenyellow;
+		}
+		#section{
+			width:250px;
+			height:150px;
+			position:absolute;
+			right:280px;
+			top:200px;
+			background:lightseagreen;
+			display:none;
+		}
+	</style>
+	<body>
+		<div id="qq">
+			<div id="small"></div>
+			<section id="section"></section>
+		</div>
+	</body>
+	<script>
+		var flage=false;
+		var userimg=document.getElementById("small");
+		var usersection=document.getElementById("section");
+		userimg.onmouseover=function(){
+			userimg.style.background="black";
+			setTimeout(function(){
+				usersection.style.display="block";
+			},1000)
+		}
+		userimg.onmouseout=function(){
+			userimg.style.background="";
+			setTimeout(function(){
+				if (flage==true) {
+					
+				} else{
+					usersection.style.display="none";
+				}
+				
+			},1000)
+		}
+		usersection.onmouseout=function(){
+			flage=false;
+			usersection.style.display="none";
+		}
+		usersection.onmouseover=function(){
+			flage=true;
+			usersection.style.display="block";
+		}
+	</script>
+</html>

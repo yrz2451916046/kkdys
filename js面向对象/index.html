@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>mxdx1</title>
+		<style>
+			div{
+				width:100px;
+				height:100px;
+				background:greenyellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		/*var sub={
+			name:"stark",
+			age:"18",
+			sex:"男"
+		}
+		console.log(sub);
+		console.log(sub.sex);
+		console.log(typeof sub);
+		//++++++++++++++++++++++++++++++++++++++++
+		var tip={
+			"!@#!$@!$!#!@":"QWEASDASD",
+			"ASFWETDSASD":"lkzxvmsd",
+			"sandioans":"unlanmsoidnf",
+		}
+		console.log(tip);
+		console.log(tip["!@#!$@!$!#!@"]);*/
+		//++++++++++++++++++++++++++++++++++++++++++
+		/*var qwer=new Object();//这是一个空对象，里面没有任何属性
+		qwer.name="stark";
+		qwer.age=18;
+		qwer.sex="man";
+		console.log(qwer.name);
+		console.log(qwer);*/
+		
+		//体验面向对象的好处
+		/*var xiaoming={
+			name:"小明",
+			age:18,
+			sex:"男",
+			xueli:"小学生",
+			address:"石景山",
+			play:"lol",
+			weight:"60kg"
+		}
+		var xiaohong={
+			name:"小红",
+			age:17,
+			sex:"女",
+			xueli:"小学生",
+			address:"石景山",
+			play:"popcar",
+			weight:"50kg"
+		}
+		console.log(xiaoming.play);
+		console.log(xiaohong.play);*/
+		
+		/*var xiaoming={
+			name:"小明",
+			age:18,
+			sex:"男",
+			xueli:"小学生",
+			address:"石景山",
+			play:"lol",
+			weight:"60kg",
+			sayhello:function(){
+				alert("你好，我是"+this.name);
+				alert("今年"+this.age+"岁了");
+				alert("我是可爱的小"+this.sex+"生");
+			},
+			zhangda:function(){
+				this.age++;
+			},
+			bianxing:function(){
+				if(this.sex=="男"){
+					this.sex="女";
+				}else{
+					this.sex="男";
+				}
+			}
+		}
+		xiaoming.sayhello();
+		xiaoming.zhangda();
+		xiaoming.zhangda();
+		xiaoming.zhangda();
+		xiaoming.zhangda();
+		xiaoming.bianxing();
+		xiaoming.sayhello();*/
+		
+		//复习一下this(19日下午2：00-3：00)
+		function fun(){
+			alert(this);
+		}
+		//fun();
+		//直接用()调用函数,函数里面的this指的是window对象
+		
+		var box=document.getElementById("box");
+		//box.onclick=fun;
+		//函数绑定给了一个事件，那么事件发生的时候函数将执行，
+		//this就是触发事件的那个html对象
+		
+		
+		//setInterval(fun,1000);
+		//用定时器来调用函数，函数里面的this是window
+		
+		
+		var obj={
+			name:"starasd",
+			sex:"nan",
+			haha:fun,
+		}
+		//obj.haha();
+		//创建一个对象，将这个对象的haha属性，设置为刚才的fun函数，那么
+		//用对象的方法来调用的时候，函数里面的this是这个对象。
+	</script>
+</html>

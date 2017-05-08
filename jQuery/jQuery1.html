@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+	</head>
+	<style type="text/css">
+		.box{
+			
+		}
+	</style>
+	<body>
+		<div class="box">
+			
+		</div>
+	</body>
+	<script>
+		//第一种写法
+		$(".box").css("background-color","red");
+		//第二种写法
+		$(".box")[0].style.backgroundColor="yellow";
+		//改变多个属性
+		$(".box").css({"background-color":"red","width":"200px"});
+		//$和jQuery作用相同
+		jQuery(".box").css({"background-color":"red","width":"200px"});
+		
+	</script>
+</html>

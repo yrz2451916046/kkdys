@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		//正则表达式介绍
+		/*正则表达式（regular expression)是一个描述字符模式的对象,
+		javascript的regexp累表示正则表达式
+		
+		正则表达式定义
+		JavaScript中的正则表达式用RegExp对象表示,可以使用RegExp()
+		构造函数来创建 RegExp对象.不过RegExp 对象更多的是通过一种特殊的直接量语法来创建*/
+		
+		/*var pattern=/d$/;
+		console.log(typeof pattern);
+		console.log(pattern.constructor);
+		
+		var pattern=new RegExp("d$");*/
+		
+		/*今天学习六个方法
+		正则相关exec test
+		字符串相关方法 search match split replace*/
+		/*var str="a b  c";
+		//console.log(str.split(""));
+		//console.log(str.split(" "));
+		console.log(str.split(/\s+/));*/
+		//split用来分割字符串为数组
+		//此时,\s 表示空白字符  +表示出现一次或多次(至少要出现一次)
+		
+		/*当我们不能用一个完整的字符串表达这个切割符号的时候,
+		但是我们能提炼换一个规则来切,
+		此时我们就可以用正则表达式表示这个规则,来切割字符串*/
+		
+		/*var str2="bbaaccdadddaaeadeeaeef";
+		console.log(str2.split(/\a+/));//需要\吗？*/
+		
+		
+		/*var str="abcde";
+		//打算匹配cd 在str变量里面首次出现的位置
+		
+		console.log(str.indexOf("cd"));
+		console.log("=============");
+		console.log(str.search("cd"));
+		console.log("=============");
+		console.log(str.search(/cd/));
+		console.log("=============");
+		console.log(str.search(/ff/));*/
+		
+		/*search用来寻找字符或者字符串中的位置,
+		我们可传递字符串,也可以传递字符,
+		它的参数是一个正则表达式,返回第一个预支匹配的字符串的起始位置,
+		如果找不到匹配的字符串,它将返回-1.
+		
+		indexOf()方法可返回某个指定的字符串值在字符串中首次出现的位置*/
+		
+		/*var str="abbcccddddeeeefffbbbsssbbssee";
+		var str="xiaobai回家看电影，电影很好看";
+		console.log(str.match(/电影/));*/
+		//console.log(str.match(/bb/g));
+		
+		/*在字符串中寻找匹配的字符串,它是一个字符串方法
+		参数是匹配的字符串或是匹配规则
+		g表示全局匹配 str.match(/bb/g);
+		当不加g全局的时候
+		第一个参数是 匹配的规则或字符 文本
+		第二个参数是 返回匹配的位置key是index
+		第三个参数是 返回匹配的所有内容key是input
+		["电影"
+		index：10；
+		input："xiaobai回家看电影，电影很好看"]
+		
+		加上g全局的时候,返回匹配的具体内容是数组形式
+		["电影","电影"]*/
+		
+		/*var str="xiaohong在看人民的名义";
+		//console.log(str.replace(/人民的名义/,"新闻联播"));
+		console.log(str.replace(/人民的名义/,"新闻联播"));*/
+		/*console.log(str.replace(/人民的名义/,function(){
+				return "前端学习手册";
+		}));*/
+		
+		/*接收两个参数
+		第一个是:匹配的字符串,可以是字符串,也可以是表达式
+		第二个是:替换的字符串,可以是简单类型的字符串,也可以是函数
+			注意,函数要有返回值,并且将这个返回值作为字符串*/
+			
+		/*var reg=/abc/g;
+		var str="aaaajjjabckkkkabclll";
+		var reg1=new RegExp("abc","g");
+		console.log(reg1.exec(str));//文本匹配
+		
+		它是正则对象的方法
+		正则表达式我们有两种创建方式
+		字面量形式:var reg=/abc/g;
+		实例化形式:var reg=new RegExp("abc","g");
+		表示创建一个匹配abc字符串的正则对象
+		
+		使用exec方法:reg.exec();
+		
+		*/
+		
+		/*var reg=/hello/;
+		var str="hello stark";
+		
+		console.log(reg.test(str));
+		
+		var demo=prompt("不准输入空格");
+		alert(!(/\s/.test(demo)));//test返回布尔值
+		*/
+		/*它是正则对象的一个方法
+		它表示该字符串是否匹配我们的规则
+		返回 布尔值
+		如果匹配到就返回true,如果没匹配到就返回false*/
+		
+		/*不管正则表达式是否具有全局修饰符
+		exec都会返回同一样的数组
+		
+		laseIndex每次调用后这个都会变化*/
+		
+		
+	</script>
+</html>

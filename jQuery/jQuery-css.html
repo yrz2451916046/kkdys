@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title>css</title>
+		<script src="./jquery.js" charset="utf-8"></script>
+	</head>
+	<body>
+		<p>hello</p>
+		<p>world</p>
+		<p>你好</p>
+		<p>世界</p>
+		<p>hi</p>
+	</body>
+	<script>
+		//当动画执行完毕后执行
+		$("p").animate({"left":1000},2000,function(){
+			$(this).css("background-color","red");
+		})
+		//动画排队，都是box1在动，所以排队，当一个动画执行完，在执行
+		$(".box1"),animate({"left":1000},2000);
+		$(".box1"),animate({"top":400},2000);
+		//斜着跑
+		$(".box1"),animate({"left":1000,"top":400},2000);
+		//不同元素不排队
+		$(".box1").animate({"left":})
+	</script>
+</html>

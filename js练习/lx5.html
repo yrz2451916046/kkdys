@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>API</title>
+	</head>
+	<body>
+	</body>
+	<script>
+		//数组转字符串两种方法
+		/*var arr=[1,2,3,4,5];
+		var str=arr.toString();
+		console.log(str);
+		var sdr=arr.join("-");
+		console.log(sdr);*/
+		//数组的拼接和截取
+		/*var arr1=["you","can","you","up"];
+		var arr2=["no","can","no","bb"];
+		var newarr=arr1.concat(arr2);
+		console.log(arr1+arr2);
+		console.log(typeof (arr1+arr2));
+		console.log(newarr);
+		console.log(typeof newarr);
+		arr1.slice(1,2);*/
+		//删除、插入、替换。splice会改变原数组
+		/*var arr1=["you","can","you","up"];
+		arr1.splice(2,1,"i");
+		console.log(arr1);*/
+		//翻转数组。reverse会改变原数组
+		/*var arr=[1,2,3,4,5];
+		console.log(arr.reverse())*/
+		//indexOf(查找这个元素的位置，从第几角标开始找)
+		/*var arr=[1,5,2,3,2,4,5];
+		console.log(arr.indexOf(6));
+		var arr1=[1,2,3,4,5,1];
+		console.log(arr1.indexOf(1,3));*/
+		//默认将一切元素转换成字符串再排序
+		/*var arr=[1,23,13,45,51,123];
+		arr.sort();
+		console.log(arr);*/
+		//输入一个数字，用二进制表现出来
+		/*function dec2(dec){
+			var a=[];
+			while(dec>0){
+				a.unshift(dec%2);
+				dec=parseInt(dec/2);
+			}
+			return a.join("");
+		}
+		console.log(dec2(8));*/
+		//二维数组
+		/*var arr2048=[
+			[2,4,8,0],
+			[0,0,0,0],
+			[0,0,0,0],
+			[0,0,0,0]
+		]
+//		console.log(arr2048[1][1]);
+		//遍历二维数组
+		for(var row=0;row<arr2048.length;row++){
+			for(var col=0;col<arr2048[row].length;col++){
+				console.log(arr2048[row][col])
+			}
+		}*/
+		
+	</script>
+</html>

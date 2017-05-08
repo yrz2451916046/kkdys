@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>闭包</title>
+	</head>
+	<body>
+		<div id="" onclick="console.log(inn())">
+			 123
+		</div>
+	</body>
+	<script>
+		/*var n=1;
+		function getconter(){
+			console.log(n++)
+		}
+		getconter();
+		getconter();
+		getconter();
+		getconter();
+		getconter();
+		n=100;
+		getconter();*/
+		/*function getconter(){
+			var n=1;
+			var conter=function (){
+				return n++;
+			}
+			return conter;
+		}
+		var getnum=getconter();
+		console.log(getnum());
+		console.log(getnum());
+		console.log(getnum());
+		console.log(getnum());
+		console.log(getnum());
+		n=100;
+		console.log(getnum());*/
+		function outer(){
+			var n=1;
+			var innner = function(){
+				return n++;
+			}
+			return innner;
+		}
+		var inn=outer();
+		
+	</script>
+</html>

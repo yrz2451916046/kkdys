@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>123</title>
+	</head>
+	<style>
+		*{margin: 0;padding: 0;}
+		li{list-style: none;}
+		#banner{
+			width:500px;
+			height:350px;
+			overflow:hidden;
+			margin:80px auto;
+			position:relative;
+		}
+		#banner ul{
+			width:3000px;
+			height:350px;
+		}
+		#banner ul li{
+			width:500px;
+			height:350px;
+			float: left;
+		}
+		img{ 
+			width:500px;
+			height:350px;
+		}
+		#lr{
+			width:500px;
+			height:350px;
+			position:absolute;
+			left:0;
+			top:0;
+		}
+		#lr .left{
+			width:50px;
+			height:350px;
+			float:left;
+			font-size:50px;
+			color:white;
+			background-color:rgba(0,0,0,0.6);
+			line-height:350px;
+			text-align:center;
+		}
+		#lr .right{
+			width:50px;
+			height:350px;
+			float:right;
+			font-size:50px;
+			color:white;
+			background-color:rgba(0,0,0,0.6);
+			line-height:350px;
+			text-align:center;
+		}
+		#banner .bannerlist{
+			width:150px;
+			height:20px;
+			position:absolute;
+			bottom:0;
+			left:175px;
+		}
+		#banner .bannerlist li{
+			width:20px;
+			height:20px;
+			margin:0 5px;
+			border-radius:50%;
+			background-color:rgba(0,0,0,0.9);
+			line-height:20px;
+			text-align: center;
+		}
+		.bannerlist li a{
+			text-decoration:none;
+			color:white;
+		}
+		.bannerlist li:hover{
+			background:white;
+			font-weight:bolder;
+		}
+		.bannerlist li:hover a{
+			color:red;
+		}
+		#banner .bannerlist .now{
+			background:white;
+			
+		}
+		#banner .bannerlist .now a{
+			color:black;
+		}
+	</style>
+	<body>
+		<div id="banner">
+			<ul>
+				<li><img src="img/1.jpg"></li>
+				<li><img src="img/2.jpg"></li>
+				<li><img src="img/3.jpg"></li>
+				<li><img src="img/4.jpg"></li>
+				<li><img src="img/5.jpg"></li>
+				<li><img src="img/1.jpg"></li>
+			</ul>
+			<div id="lr">
+				<li class="left"><</li>
+				<li class="right">></li>
+			</div>
+			<ul class="bannerlist">
+				<li class="now"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+			</ul>
+		</div>
+	</body>
+	<script src="js/lun.js">
+	
+	</script>
+</html>

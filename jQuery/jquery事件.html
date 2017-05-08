@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title>css</title>
+		<script src="./jquery.js" charset="utf-8"></script>
+	</head>
+	<body>
+		<p>hello</p>
+		<p>world</p>
+		<p>你好</p>
+		<p>世界</p>
+		<p>hi</p>
+		<input class="blur1" type="" name="" id="" value="" />
+	</body>
+	<script>
+		//点击事件
+		$("p").click(function(){
+			$(this).hide();
+		})
+		
+		//鼠标移入
+		$("p").mouseenter(function(){
+			&(this).css("background-color","yellow")
+		})
+		
+		//鼠标移出
+		$("p").mouseleave(function(){
+			&(this).css("background-color","#fff")
+		})
+		
+		//hover鼠标悬停，相当于移入移出
+		$("p").hover(
+			function(){
+				$(this).addClass("hover");
+			};
+			function(){
+				$(this).removeClass("hover");
+			};
+		)
+		//失去焦点
+		$(".blut1").
+		//提交表单submit
+		
+	</script>
+</html>
