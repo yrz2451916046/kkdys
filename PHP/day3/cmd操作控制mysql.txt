@@ -1,0 +1,15 @@
+cmd操作控制mysql
+
+cd..是返回上一级
+cd 加文件名是进入
+
+首先找到mysql文件夹
+然后进入bin
+之后输入密码（通常为空）
+
+mysql -u root -p;
+
+        use tablename;数据库名
+        show tables; 显示表
+        describe tablename; 表的详细描述
+

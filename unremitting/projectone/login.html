@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录页面</title>
+	</head>
+	<style type="text/css">
+		#aa{
+			width:100px;
+			height:100px;
+			background-color: red;
+		}
+	</style>
+	<body>
+		用户名：
+		<input type="name" name="userid" id="userid" value="" /></br>
+		密码：
+		<input type="password" name="password" id="password" value="" /></br>
+		<button>登录</button>
+		<div id="aa">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		var uid = $("#userid").val();
+		var psw = $("#password").val();
+		var but = $("button");
+		but.click  (function(){
+//			console.log(1);
+			$.ajax({
+				type:"get",
+				url:"login.php",
+				data:{userid:uid,password:psw},//贼jb屌，少个逗号都管。
+				success:function(msg){
+					document.write("注册成功！3秒后自动跳转登录界面！");
+					setTimeout(function(){
+						window.location.href='homepage.html';
+					},3000)
+				}
+			});
+		})
+	</script>
+</html>

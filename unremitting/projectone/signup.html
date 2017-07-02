@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		用户名：<input type="name" name="userid" id="userid" value=""/></br>
+		密码：<input type="password" name="password" id="password" value="" /></br>
+		<button>提交</button>
+	</body>
+	<!--<script type="text/javascript" src="ajax.js"></script>-->
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		var inp1 = document.getElementById("userid");
+//		console.log(inp1);
+		var inp2 = document.getElementById("password");
+//		console.log(inp2);
+		var btn = document.getElementsByTagName("button")[0];
+		btn.onclick = function(){
+			$.ajax({
+				type:"get",
+				url:"signup.php",
+				data:{userid:inp1.value,password:inp2.value},//贼jb屌，少个逗号都管。
+				success:function(){
+					document.write("注册成功！3秒后自动跳转登录界面！");
+					setTimeout(function(){
+						window.location.href='login.html';
+					},3000)
+				}
+			});
+		}
+	</script>
+</html>

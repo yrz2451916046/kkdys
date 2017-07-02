@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="">
+                标题：<input id="title" type="text" name="title"/>
+            </div>
+            <div class="">
+           	留言内容</br>
+                <textarea id="content" name="name" rows="8" cols="80"></textarea>
+            </div>
+        <div class="">
+            <button  id="fuck">提交留言 </button>
+        </div>
+
+        <div class="content">
+            <table  id="msg">
+                <tr>
+                    <td>id</td>
+                    <td>title</td>
+                    <td>content</td>
+                </tr>
+            </table>
+        </div>
+	</body>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$("#fuck").click(function(){
+			$.ajax({
+				type:"get",
+				url:"homepage.php",
+				data:{title:$('#title').val(),content:$('#content').val()},
+				success:function(msg){
+					var obj = JSON.parse(msg);
+//					console.log(obj);
+					var html =
+                    '<tr>\
+                        <td>'+obj[0]+'</td>\
+                        <td>'+obj[1]+'</td>\
+                        <td>'+obj[2]+'</td>\
+                    </tr>';
+                    $("#msg").append(html);
+				}
+			});
+		})
+	</script>
+</html>
